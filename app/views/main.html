@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <div class="search-input-results">
+      <h1>Giphy Search</h1>
+      <form ng-submit="newSearch(searchTerm)" class="form-group">
+        <input ng-model="searchTerm" placeholder="Search for GIFs" class="form-control" required>
+        <input type="submit" value="search" class="search-btn btn btn-default btn-block btn-xs">
+      </form>
+
+      <div class="search-results">
+        <div class="search-result-images" ng-repeat="gif in giphyData.data">
+          <img class="result-static" src="{{ gif.images.original_still.url }}">
+          <img class="result-gif "src="{{ gif.images.original.url }}">
+        </div>
+
+      </div> <!-- .search-input-results -->
+    </div> <!-- .seach-results -->
+
+  </div> <!-- .col-md-4 -->
+</div> <!-- .row -->
