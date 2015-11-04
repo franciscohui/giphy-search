@@ -28,15 +28,15 @@ angular.module('giphySearchApp')
           $scope.giphyData = response.data;
           console.log($scope.giphyData);
 
-        }, function errorCallback(response) {
+        }, function errorCallback() {
         });
   }; //searchGiphy
 });
 
 /**
 
-when form is submitted, 
+when form is submitted,
 replace search variable with the new text input
 call $http get method
 use parameter inside search query
-**/ 
+**/
